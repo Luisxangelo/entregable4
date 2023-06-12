@@ -69,7 +69,10 @@ const ModalForm = ({isShowModal, createUser,isUserToUpdate, updateUser, resetMod
                 />
             </div>
             <button onClick={handleCloseModal} type="button" className="absolute top-2 right-2 text-2xl hover:text-secondary"><i className='bx bx-x'></i></button>
-            <button className='bg-secondary text-primary rounded-xl p-2'>{isUserToUpdate ? "Guardar cambios":"Agregar nuevo usuario"}</button>
+            <div className="flex gap-2">
+            <button className='bg-secondary text-primary rounded-xl p-2 shadow-md shadow-white'>{isUserToUpdate ? "Guardar cambios":"Agregar nuevo usuario"}</button>
+            <button onClick={handleCloseModal} type="button" className="bg-red-500 text-primary rounded-xl p-2 shadow-md shadow-white">Cancelar</button>
+            </div>
         </form>
     </section>
   )
